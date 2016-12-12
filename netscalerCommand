@@ -1,0 +1,10 @@
+Trace -
+
+set ssl vserver "vServer_Name" -sessReuse DISABLED
+set ssl vserver "vServer_Name" -dh DISABLED
+unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
+
+tail -f \var\log\ns.log
+
+
+start nstrace -size 0 -mode SSLPLAIN
