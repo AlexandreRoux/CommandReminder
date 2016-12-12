@@ -6,5 +6,7 @@ unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
 
 tail -f \var\log\ns.log
 
-
 start nstrace -size 0 -mode SSLPLAIN
+
+https://support.citrix.com/article/CTX116557
+https://support.citrix.com/article/CTX120668
