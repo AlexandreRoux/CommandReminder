@@ -1,12 +1,23 @@
-Trace -
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                          Netscaler Command
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-set ssl vserver "vServer_Name" -sessReuse DISABLED
-set ssl vserver "vServer_Name" -dh DISABLED
-unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
+1. Best practice for NSTrace 
+
+a. set ssl vserver "vServer_Name" -sessReuse DISABLED
+b. set ssl vserver "vServer_Name" -dh DISABLED
+c. unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
+e. packet size 0
+
+option. start nstrace -size 0 -mode SSLPLAIN
+
+articles : https://support.citrix.com/article/CTX116557 | https://support.citrix.com/article/CTX120668
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Vrac command
 
 tail -f \var\log\ns.log
+cat aaad.debug
 
-start nstrace -size 0 -mode SSLPLAIN
 
-https://support.citrix.com/article/CTX116557
-https://support.citrix.com/article/CTX120668
+
