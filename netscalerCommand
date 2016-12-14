@@ -18,6 +18,6 @@ articles : https://support.citrix.com/article/CTX116557 | https://support.citrix
 
 tail -f \var\log\ns.log
 cat aaad.debug
-
+nsconmsg –d current –g pol_hits
 
 
