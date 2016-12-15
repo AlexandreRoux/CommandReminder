@@ -1,0 +1,4 @@
+Get-Culture command displays information about the regional settings on the computer
+
+$C = Get-Culture
+$C | Format-List -Property *
