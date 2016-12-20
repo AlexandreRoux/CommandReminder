@@ -2,4 +2,5 @@
                                                           Wireshark Command
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1.
+1. Check if handshake was captured
+> ssl.handshake.type eq 16 and ip.addr eq vServer_IP
