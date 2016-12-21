@@ -1,0 +1,2 @@
+Add-PSSnapin ShareFile
+$sfClient = New-SfClient –Name "C:\scripts\token.sfps"
