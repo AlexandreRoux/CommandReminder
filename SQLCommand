@@ -15,3 +15,13 @@ JOIN table2
 ON table1.column_name=table2.column_name;
 
 PS! INNER JOIN is the same as JOIN.
+
+-----------------------------------------
+SELECT * FROM Customers
+WHERE City LIKE 's%';
+
+SELECT * FROM Customers
+WHERE City LIKE '%s';
+
+SELECT * FROM Customers
+WHERE Country LIKE '%land%';
