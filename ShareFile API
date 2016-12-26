@@ -1,2 +1,10 @@
-Add-PSSnapin ShareFile
-$sfClient = New-SfClient –Name "C:\scripts\token.sfps"
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                           ShareFile API
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+1. Add-PSSnapin ShareFile
+> Load the ShareFile Library to use PowerShell command
+
+2. $sfClient = New-SfClient –Name "C:\scripts\token.sfps"
+> This command create a new token linked to the ShareFile account
