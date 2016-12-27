@@ -25,3 +25,8 @@ WHERE City LIKE '%s';
 
 SELECT * FROM Customers
 WHERE Country LIKE '%land%';
+-----------------------------------------
+
+Mysql
+
+1. select * from mysql.user;
