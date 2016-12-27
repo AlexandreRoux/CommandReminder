@@ -3,8 +3,25 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-1. Add-PSSnapin ShareFile
-> Load the ShareFile Library to use PowerShell command
+1. ShareFile Library
+Load the ShareFile Library (dlls) into your environment and allow you to utilize them.
 
-2. $sfClient = New-SfClient –Name "C:\scripts\token.sfps"
-> This command create a new token linked to the ShareFile account
+Shell > Add-PSSnapin ShareFile
+------------------------------
+
+2. ShareFile Authentication
+
+Shell > New-SfClient
+This command will call a web pop which will allow you to login into ShareFIle using your standard credentials.  
+The request generates oAuth and session tokens which are then passed back into PowerShell where they need to be stored 
+for further requests.
+
+Option a. Shell > $sfLogin = New-SfClient
+This will temporarily store the credentials as long as you have your PowerShell environment active.
+
+Option b. Shell > New-SfClient –Name "c:\tmp\sflogin.sfps"
+This will temporarily store the credentials as long as you have your PowerShell environment active.
+
+Shell > $sfLogin = Get-SfClient –Name "c:\tmp\sflogin.sfps"
+This will use the file recently created to login information (allows you to run scripts uninterrupted once you pass through 
+the initial authentication)
