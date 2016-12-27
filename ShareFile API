@@ -25,3 +25,22 @@ This will temporarily store the credentials as long as you have your PowerShell 
 Shell > $sfLogin = Get-SfClient –Name "c:\tmp\sflogin.sfps"
 This will use the file recently created to login information (allows you to run scripts uninterrupted once you pass through 
 the initial authentication)
+------------------------------
+
+3. Executing Requests
+Shell > $sfItems = Send-SFRequest –Client $sfLogin –Method GET –Entity Items
+This request will retrieve all the items the user has access to.  Items can include files, folders, notes and links.  
+The result set will be saved to the variable $sfItems which can be used later.
+
+-Client – this is the variable you saved your oAuth Login token to, in our case we are saving it to $sfLogin
+
+-Method – this is the HTTP verb you are using for this request. The available verbs are
+
+GET – Gets an entity
+POST – Create an entity
+PATCH – Update an entity
+DELETE – Deletes an entity
+
+-Entity – This is the actual API Object we are working with, you can find a full list of API entities at api.sharefile.com
+
+Source : https://www.citrix.com/blogs/2014/05/16/getting-started-with-the-powershell-sdk/
