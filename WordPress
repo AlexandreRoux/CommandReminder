@@ -1,0 +1,1 @@
+UPDATE wp_options SET option_value = "http://ec2-xxxxxxxx.compute.amazonaws.com/blog/" WHERE option_name = "siteurl"
