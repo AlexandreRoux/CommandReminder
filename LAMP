@@ -1,5 +1,61 @@
+1. Installation
 Shell > sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
 Shell > sudo service httpd start
 Shell > sudo chkconfig httpd on  #chkconfig command to configure the Apache web server to start at each system boot
 
-Shell > chkconfig --list httpd  #Running level 2 + 3 + 4 + 5 
+Shell > sudo chkconfig --list httpd  #Running level 2 + 3 + 4 + 5 
+
+2. Enable SSL/TLS
+Shell > sudo service httpd start
+Shell > sudo yum update -y
+Shell > sudo yum install -y mod24_ssl
+Shell > sudo service httpd restart
+
+3. Install CA cert from letsencrypt
+Shell > sudo curl -O https://dl.eff.org/certbot-auto
+Shell > sudo chmod +x certbot-auto 
+Shell > sudo mv certbot-auto /usr/local/bin/certbot-auto
+Shell > sudo certbot-auto certonly --standalone -d example.com
+Shell > sudo vi /etc/httpd/conf.d/ssl.conf
+Edit SSLCertificatesFile /etc/letsencrypt/live/example.com/fullchain.pem
+Edit SSLCertificatesKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+
+NEED TO ADD : Cron task to renew certificate every 3 month
+
+----------------------------------------------------------------------------------------------------------------------------------------
+/etc/httpd/conf.d/ssl.conf
+The configuration file for mod_ssl. It contains "directives" telling Apache where to find encryption keys and certificates, 
+which SSL/TLS protocols to allow, and what encryption algorithms to use.
+
+/etc/pki/tls/private/localhost.key
+An automatically generated, 2048-bit RSA private key for your Amazon EC2 host. During installation, OpenSSL used this key 
+to generate a self-signed host certificate, and you can also use it later to generate a certificate signing request (CSR) 
+to submit to a certificate authority (CA).
+
+/etc/pki/tls/certs/localhost.crt
+An automatically generated, self-signed X.509 certificate for your server host. This certificate is useful for testing 
+that Apache is properly set up to use SSL/TLS.
+
+/etc/letsencrypt/live/example.com/fullchain.pem
+An certificate create issued by CA Let's Encrypt using ACME protocole Cerbot.
+
+/etc/letsencrypt/live/example.com/privkey.pem
+The key of fullchain.pem certificate.
+
+The .key and .crt files are both in PEM format, with consists of Base64-encoded ASCII characters framed by 
+"BEGIN" and "END" lines, as in this abbreviated example of a certificate:
+
+                        -----BEGIN CERTIFICATE-----
+                        MIIEazCCA1OgAwIBAgICWxQwDQYJKoZIhvcNAQELBQAwgbExCzAJBgNVBAYTAi0t
+                        MRIwEAYDVQQIDAlTb21lU3RhdGUxETAPBgNVBAcMCFNvbWVDaXR5MRkwFwYDVQQK
+                        DBBTb21lT3JnYW5pemF0aW9uMR8wHQYDVQQLDBZTb21lT3JnYW5pemF0aW9uYWxV
+                        bml0MRkwFwYDVQQDDBBpcC0xNzItMzEtMjAtMjM2MSQwIgYJKoZIhvcNAQkBFhVy
+                        ...
+                        z5rRUE/XzxRLBZOoWZpNWTXJkQ3uFYH6s/sBwtHpKKZMzOvDedREjNKAvk4ws6F0
+                        WanXWehT6FiSZvB4sTEXXJN2jdw8g+sHGnZ8zCOsclknYhHrCVD2vnBlZJKSZvak
+                        3ZazhBxtQSukFMOnWPP2a0DMMFGYUHOd0BQE8sBJxg==
+                        -----END CERTIFICATE-----
+                        
+The file names and extensions are a convenience and have no effect on function; you can call a certificate either 
+cert.crt or cert.pem or certificate.pem, so long as the related directive in the ssl.conf file uses the same name.
+----------------------------------------------------------------------------------------------------------------------------------------
