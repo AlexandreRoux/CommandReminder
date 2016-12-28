@@ -22,6 +22,9 @@ Edit SSLCertificatesKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 
 NEED TO ADD : Cron task to renew certificate every 3 month
 
+https://certbot.eff.org/
+https://letsencrypt.org/
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 /etc/httpd/conf.d/ssl.conf
 The configuration file for mod_ssl. It contains "directives" telling Apache where to find encryption keys and certificates, 
