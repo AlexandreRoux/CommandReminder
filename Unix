@@ -1,0 +1,1 @@
+sudo find / -type d -name 'wp-content'
