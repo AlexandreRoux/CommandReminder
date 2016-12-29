@@ -7,3 +7,7 @@ UPDATE wp_posts SET post_content = replace(post_content, 'http://www.oldurl', 'h
 UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.oldurl','http://www.newurl');
 
 http://wpbeaches.com/updating-wordpress-mysql-database-after-moving-to-a-new-url/
+
+Upload issue
+sudo chmod 0755 /var/www/html/blog/wp-content/
+sudo chown -R apache:apache /var/www/html
