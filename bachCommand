@@ -7,3 +7,5 @@
 fsutil file createnew file.txt 10000000
 
 2. dism /online /get-intl
+
+3. net use d:\\server\share /user:Accounts\User1
