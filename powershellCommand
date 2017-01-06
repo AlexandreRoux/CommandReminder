@@ -5,11 +5,11 @@
 1. Get-Culture command displays information about the regional settings on the computer
 
   a. Get-Culture
+  
+  b. $C = Get-Culture
+     $C | Format-List -Property *
 
-  b. 
-  $C = Get-Culture
-  $C | Format-List -Property *
-
-2.
+2. Test-NetConnection cmdlet displays diagnostic information for a connection. 
+   It supports ping test, TCP test, route tracing, and route selection diagnostics. 
 
   a. Test-NetConnection -Port 443 -ComputerName MyComputerName.internet.com -InformationLevel Detailed
