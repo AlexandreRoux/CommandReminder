@@ -7,3 +7,6 @@
 
 2. Check TCP bad packet
 tcp.analysis.flags
+
+The default Wireshark installation has a coloring rule named "Bad TCP" which uses red text on a black background. 
+This coloring rule matches the condition "tcp.analysis.flags".
