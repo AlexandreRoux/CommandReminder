@@ -1,15 +1,16 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                            Batch
+                                                        Windows Shell
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Create a test file
+> fsutil file createnew file.txt 10000000
 
-fsutil file createnew file.txt 10000000
+2. 
+> dism /online /get-intl
 
-2. dism /online /get-intl
+3. 
+> net use d:\\server\share /user:Accounts\User1
 
-3. net use d:\\server\share /user:Accounts\User1
-
-4.taskkill /F /IM explorer.exe
-
-tasklist /FI "imagename eq explorer.exe"
+4.
+> taskkill /F /IM explorer.exe
+> tasklist /FI "imagename eq explorer.exe"
