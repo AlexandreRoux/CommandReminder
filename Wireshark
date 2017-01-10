@@ -10,3 +10,6 @@ tcp.analysis.flags
 
 The default Wireshark installation has a coloring rule named "Bad TCP" which uses red text on a black background. 
 This coloring rule matches the condition "tcp.analysis.flags".
+
+3. Filter out the time delay
+((tcp.time_delta > .3 ) && (tcp.flags.fin == 0)) && (tcp.flags.reset == 0)
