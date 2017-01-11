@@ -3,21 +3,24 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Best practice to do NS trace
+    Shell > set ssl vserver "vServer_Name" -sessReuse DISABLED
+    Shell > set ssl vserver "vServer_Name" -dh DISABLED
+    Shell > unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
+    Shell > packet size 0
 
-a. set ssl vserver "vServer_Name" -sessReuse DISABLED
-b. set ssl vserver "vServer_Name" -dh DISABLED
-c. unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
-e. packet size 0
+    option > start nstrace -size 0 -mode SSLPLAIN
 
-option. start nstrace -size 0 -mode SSLPLAIN
+    articles : https://support.citrix.com/article/CTX116557 | https://support.citrix.com/article/CTX120668
 
-articles : https://support.citrix.com/article/CTX116557 | https://support.citrix.com/article/CTX120668
--------------------------------------------------------------------------------------------------------------------------------------------
+2. Output appended data as the file grows
+    Shell > tail -f \var\log\ns.log
 
-2. Vrac command
+3. View the output of aaad.debug file
+    Shell > cat aaad.debug
 
-tail -f \var\log\ns.log
-cat aaad.debug
-nsconmsg –d current –g pol_hits
-set authentication vserver <VserverName>-AuthenticationDomain alex.company.fr
+4. Display hit on NS GW policies
+    Shell > nsconmsg –d current –g pol_hits
+    
+5. Set authentication Domain on AAA Vserver
+    Shell > set authentication vserver <VserverName>-AuthenticationDomain alex.company.fr
 
