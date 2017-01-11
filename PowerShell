@@ -13,3 +13,6 @@
    It supports ping test, TCP test, route tracing, and route selection diagnostics. 
 
   a. Test-NetConnection -Port 443 -ComputerName MyComputerName.internet.com -InformationLevel Detailed
+
+3. Rename extension of multiple file
+   dir * | rename-item -newname { [io.path]::ChangeExtension($_.name, ".xls") }
