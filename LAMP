@@ -3,34 +3,34 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Installation Apache and Mysql
-Shell > sudo yum update -y
-Shell > sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
-Shell > sudo service httpd start
-Shell > sudo chkconfig httpd on  #chkconfig command to configure the Apache web server to start at each system boot
-Shell > sudo chkconfig --list httpd  #Running level 2 + 3 + 4 + 5 
-Shell > sudo groupadd www
-Shell > sudo usermod -a -G www ec2-user
-Shell > sudo chown -R root:www /var/www
-Shell > sudo chmod 2775 /var/www
-Shell > find /var/www -type d -exec sudo chmod 2775 {} \;
-Shell > find /var/www -type f -exec sudo chmod 0664 {} \;
-Shell > sudo mysql_secure_installation
-Shell > sudo chkconfig mysqld on
+    Shell > sudo yum update -y
+    Shell > sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+    Shell > sudo service httpd start
+    Shell > sudo chkconfig httpd on  #chkconfig command to configure the Apache web server to start at each system boot
+    Shell > sudo chkconfig --list httpd  #Running level 2 + 3 + 4 + 5 
+    Shell > sudo groupadd www
+    Shell > sudo usermod -a -G www ec2-user
+    Shell > sudo chown -R root:www /var/www
+    Shell > sudo chmod 2775 /var/www
+    Shell > find /var/www -type d -exec sudo chmod 2775 {} \;
+    Shell > find /var/www -type f -exec sudo chmod 0664 {} \;
+    Shell > sudo mysql_secure_installation
+    Shell > sudo chkconfig mysqld on
 
 2. Enable SSL/TLS
-Shell > sudo service httpd start
-Shell > sudo yum update -y
-Shell > sudo yum install -y mod24_ssl
-Shell > sudo service httpd restart
+    Shell > sudo service httpd start
+    Shell > sudo yum update -y
+    Shell > sudo yum install -y mod24_ssl
+    Shell > sudo service httpd restart
 
 3. Install CA cert from letsencrypt
-Shell > sudo curl -O https://dl.eff.org/certbot-auto
-Shell > sudo chmod +x certbot-auto 
-Shell > sudo mv certbot-auto /usr/local/bin/certbot-auto
-Shell > sudo certbot-auto certonly --standalone -d example.com
-Shell > sudo vi /etc/httpd/conf.d/ssl.conf
-Edit SSLCertificatesFile /etc/letsencrypt/live/example.com/fullchain.pem
-Edit SSLCertificatesKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+    Shell > sudo curl -O https://dl.eff.org/certbot-auto
+    Shell > sudo chmod +x certbot-auto 
+    Shell > sudo mv certbot-auto /usr/local/bin/certbot-auto
+    Shell > sudo certbot-auto certonly --standalone -d example.com
+    Shell > sudo vi /etc/httpd/conf.d/ssl.conf
+    Edit SSLCertificatesFile /etc/letsencrypt/live/example.com/fullchain.pem
+    Edit SSLCertificatesKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 
 NEED TO ADD : Cron task to renew certificate every 3 month
 
