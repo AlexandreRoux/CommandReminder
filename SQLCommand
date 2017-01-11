@@ -1,32 +1,29 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                          SQL Command
+                                                                SQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-SELECT column_name(s)
-FROM table1
-INNER JOIN table2
-ON table1.column_name=table2.column_name;
+1. JOIN
 
-OR
+    SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+    ON table1.column_name=table2.column_name;
 
-SELECT column_name(s)
-FROM table1
-JOIN table2
-ON table1.column_name=table2.column_name;
+    SELECT column_name(s)
+    FROM table1
+    JOIN table2
+    ON table1.column_name=table2.column_name;
 
-PS! INNER JOIN is the same as JOIN.
+    PS! INNER JOIN is the same as JOIN.
 
------------------------------------------
-SELECT * FROM Customers
-WHERE City LIKE 's%';
+2. LIKE
 
-SELECT * FROM Customers
-WHERE City LIKE '%s';
+    SELECT * FROM Customers
+    WHERE City LIKE 's%';
 
-SELECT * FROM Customers
-WHERE Country LIKE '%land%';
------------------------------------------
+    SELECT * FROM Customers
+    WHERE City LIKE '%s';
 
-Mysql
+    SELECT * FROM Customers
+    WHERE Country LIKE '%land%';
 
-1. select * from mysql.user;
