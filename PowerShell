@@ -16,3 +16,6 @@
 
 3. Rename extension of multiple file
    dir * | rename-item -newname { [io.path]::ChangeExtension($_.name, ".xls") }
+   
+4. Delete multiple based on extension
+   del *.txt
