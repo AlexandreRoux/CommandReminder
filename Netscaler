@@ -2,7 +2,7 @@
                                                              Netscaler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Best practice for NSTrace 
+1. Best practice to do NS trace
 
 a. set ssl vserver "vServer_Name" -sessReuse DISABLED
 b. set ssl vserver "vServer_Name" -dh DISABLED
