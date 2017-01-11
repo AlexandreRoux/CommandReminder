@@ -1,21 +1,17 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                          PowerShell Command
+                                                             PowerShell
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Get-Culture command displays information about the regional settings on the computer
+    shell > Get-Culture
+    shell > Get-Culture | Format-List -Property *
 
-  a. Get-Culture
-  
-  b. $C = Get-Culture
-     $C | Format-List -Property *
 
 2. Test-NetConnection cmdlet displays diagnostic information for a connection. 
-   It supports ping test, TCP test, route tracing, and route selection diagnostics. 
-
-  a. Test-NetConnection -Port 443 -ComputerName MyComputerName.internet.com -InformationLevel Detailed
+    Shell > Test-NetConnection -Port 443 -ComputerName MyComputerName.internet.com -InformationLevel Detailed
 
 3. Rename extension of multiple file
-   dir * | rename-item -newname { [io.path]::ChangeExtension($_.name, ".xls") }
+    Shell > dir * | rename-item -newname { [io.path]::ChangeExtension($_.name, ".xls") }
    
 4. Delete multiple based on extension
-   del *.txt
+    Shell > del *.txt
