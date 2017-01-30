@@ -15,4 +15,10 @@
 > taskkill /F /IM explorer.exe
 > tasklist /FI "imagename eq explorer.exe"
 
-5. Netstat
+netstat -e -s
+Pour afficher les statistiques concernant uniquement les protocoles TCP et UDP, tapez :
+netstat -s -p tcp udp
+Pour afficher les connexions TCP actives et les ID de processus toutes les 5 secondes, tapez :
+Netstat-o 5
+Pour afficher les TCP actives les connexions et le processus ID sous forme numérique, tapez :
+netstat - n -o
