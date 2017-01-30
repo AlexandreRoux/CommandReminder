@@ -14,3 +14,5 @@
 4.
 > taskkill /F /IM explorer.exe
 > tasklist /FI "imagename eq explorer.exe"
+
+5. Netstat
