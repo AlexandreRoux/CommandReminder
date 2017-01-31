@@ -1,2 +1,6 @@
-Easy split function :
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                              EXCEL
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Split function integrated in the ruban :
 Go to Data tab, then Text to Columns option. Later, choose "Delimited" option and then select "other" and put any delimiter you want.
