@@ -14,7 +14,7 @@ namespace Hello
 
             Console.WriteLine("Hello, " + name);
 
-            if(hoursOfSleep > 8)
+            if(hoursOfSleep > 7)
             {
                 Console.WriteLine("You are well rested");
             }
