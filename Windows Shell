@@ -22,3 +22,5 @@ Pour afficher les connexions TCP actives et les ID de processus toutes les 5 sec
 Netstat-o 5
 Pour afficher les TCP actives les connexions et le processus ID sous forme numérique, tapez :
 netstat - n -o
+
+skin was here
