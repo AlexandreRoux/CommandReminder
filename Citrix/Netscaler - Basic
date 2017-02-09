@@ -2,25 +2,30 @@
                                                              Netscaler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Best practice to do NS trace
+1. NetScaler best practice to capture a trace on CLI.
+    a. Basic
     Shell > set ssl vserver "vServer_Name" -sessReuse DISABLED
     Shell > set ssl vserver "vServer_Name" -dh DISABLED
     Shell > unbind ssl vserver "vServer_Name" -eccCurveName "ECC_Curve_Name"
     Shell > packet size 0
-
-    option > start nstrace -size 0 -mode SSLPLAIN
-
-    articles : https://support.citrix.com/article/CTX116557 | https://support.citrix.com/article/CTX120668
-
-2. Output appended data as the file grows
+    
+    b. Optionnal
+    Shell > start nstrace -size 0 -mode SSLPLAIN
+    
+    c. Articles
+    https://support.citrix.com/article/CTX116557 
+    https://support.citrix.com/article/CTX120668
+-------------------------------------------------------------------------------------------------------------------------------------------
+2. Output end of ns.log with infinity loop
     Shell > tail -f \var\log\ns.log
-
-3. View the output of aaad.debug file
+-------------------------------------------------------------------------------------------------------------------------------------------
+3. Display the output aaad.debug
     Shell > cat aaad.debug
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 4. Display hit on NS GW policies
     Shell > nsconmsg –d current –g pol_hits
-    
+-------------------------------------------------------------------------------------------------------------------------------------------
 5. Set authentication Domain on AAA Vserver
     Shell > set authentication vserver <VserverName>-AuthenticationDomain alex.company.fr
+-------------------------------------------------------------------------------------------------------------------------------------------
 
