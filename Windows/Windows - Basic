@@ -2,15 +2,23 @@
                                                         Windows Shell
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Create a test file
-> fsutil file createnew file.txt 10000000
+1. Create a test file with desired size
+a. Basic
+Shell > fsutil file createnew file.txt 10000000
 
+b. Using loop
+$a = 0
+DO {
+fsutil file createnew $a"file.txt" 10000000
+$a++
+} While ($a -ne 10)
+-------------------------------------------------------------------------------------------------------------------------------------------
 2. 
 > dism /online /get-intl
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 3. 
 > net use d:\\server\share /user:Accounts\User1
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 4.
 > taskkill /F /IM explorer.exe
 > tasklist /FI "imagename eq explorer.exe"
@@ -22,5 +30,4 @@ Pour afficher les connexions TCP actives et les ID de processus toutes les 5 sec
 Netstat-o 5
 Pour afficher les TCP actives les connexions et le processus ID sous forme numérique, tapez :
 netstat - n -o
-
-skin was here
+-------------------------------------------------------------------------------------------------------------------------------------------
