@@ -1,2 +1,8 @@
 Wireshark flag : icap
 Wireshark flag : ((tcp.time_delta > .3 ) && (tcp.flags.fin == 0)) && (tcp.flags.reset == 0)
+
+telnet
+OPEN <server_name_or_IP> <port>
+OPTIONS icap://127.0.0.1:1344/reqmod ICAP/1.0
+or
+OPTIONS icap://127.0.0.1:1344/respmod ICAP/1.0
