@@ -1,1 +1,2 @@
-icap
+Wireshark flag : icap
+Wireshark flag : ((tcp.time_delta > .3 ) && (tcp.flags.fin == 0)) && (tcp.flags.reset == 0)
