@@ -1,1 +1,2 @@
 
+grep -r --include="*.log" -E -n -A6 -i 2017-03-06 1[3-7] | grep -i -v analytics | grep -A6 -i error
