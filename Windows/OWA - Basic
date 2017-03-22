@@ -1,1 +1,5 @@
+OWA server exposes all its supported actions, filetypes and urls via /hosting/discovery page.
+Browsing https://yourOWApublic.com/hosting/discovery from any browser > get an xml page as response which has all the details specific to that OWA server
 
+PowerShell > Get-OfficeWebAppsFarm
+Display the configuration off OfficeWebApp farm
