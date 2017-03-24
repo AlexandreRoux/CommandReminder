@@ -3,10 +3,10 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. /hosting/discovery
-OWA server expose this public facing page to inform of all its supported actions (filetypes and urls for example).
-Browsing yourOWApublic.com/hosting/discovery from any browser return an XML page.
+  OWA server expose this public facing page to inform of all its supported actions (filetypes and urls for example).
+  Browsing yourOWApublic.com/hosting/discovery from any browser return an XML page.
 
 2. PowerShell: Get-OfficeWebAppsFarm
-The Get-OfficeWebAppsFarm cmdlet returns details about the OfficeWebAppsFarm object that the current server is a member of :
-https://technet.microsoft.com/en-us/library/jj219434.aspx
+  The Get-OfficeWebAppsFarm cmdlet returns details about the OfficeWebAppsFarm object that the current server is a member of :
+  https://technet.microsoft.com/en-us/library/jj219434.aspx
 
