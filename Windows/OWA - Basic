@@ -1,5 +1,12 @@
-OWA server exposes all its supported actions, filetypes and urls via /hosting/discovery page.
-Browsing https://yourOWApublic.com/hosting/discovery from any browser > get an xml page as response which has all the details specific to that OWA server
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                         Office Web App Server
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-PowerShell > Get-OfficeWebAppsFarm
-Display the configuration off OfficeWebApp farm
+1. /hosting/discovery
+OWA server expose this public facing page to inform of all its supported actions (filetypes and urls for example).
+Browsing yourOWApublic.com/hosting/discovery from any browser return an XML page.
+
+2. PowerShell: Get-OfficeWebAppsFarm
+The Get-OfficeWebAppsFarm cmdlet returns details about the OfficeWebAppsFarm object that the current server is a member of :
+https://technet.microsoft.com/en-us/library/jj219434.aspx
+
