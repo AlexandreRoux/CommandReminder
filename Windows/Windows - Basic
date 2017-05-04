@@ -31,3 +31,5 @@ Netstat-o 5
 Pour afficher les TCP actives les connexions et le processus ID sous forme numérique, tapez :
 netstat - n -o
 -------------------------------------------------------------------------------------------------------------------------------------------
+
+robocopy "\\CIFS\Source" "S:\Shared Folders\Destination" /s /e
