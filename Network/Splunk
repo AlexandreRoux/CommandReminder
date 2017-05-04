@@ -1,1 +1,3 @@
-
+SSO Problem
+Splunk message "Unable to retrieve NameID node from SAML response. SSO will fail"
+Resolution = User is using an incorrect mail address
