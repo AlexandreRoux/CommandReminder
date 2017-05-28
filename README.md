@@ -4,4 +4,4 @@ This repository are scripts and commands I find usefull when administrating Syst
 
 # Contributors
 
-Alexandre Roux - Keith Skinner
+Alexandre Roux
