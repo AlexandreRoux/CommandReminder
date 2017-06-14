@@ -63,8 +63,17 @@ firewall_stop() { #Execute when routeur.sh stop is call
                 #Clear different iptables tables and RAZ of config
         $IPT -F
         $IPT -t nat -F
+        $IPT -X Always
+        $IPT -X Allow
+        $IPT -X Bogus
+        $IPT -X Enemies
+        $IPT -X Spams
+        $IPT -X Friends
+
         $IPT -P INPUT ACCEPT
         $IPT -P FORWARD ACCEPT
+        $IPT -P OUTPUT ACCEPT
+
 }
 
 firewall_restart() { #Execute when routeur.sh restart is call
