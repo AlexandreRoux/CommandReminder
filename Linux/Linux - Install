@@ -1,0 +1,6 @@
+### Changes on /home/$USER/.bashrc
+
+force_color_prompt=yes
+alias ls='ls -la --color=auto'
+alias dir='dir --color=auto'
+alias grep='grep --color=auto'
