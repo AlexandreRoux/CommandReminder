@@ -1,1 +1,15 @@
 1 - Apply changes on /$USER/.bashrc
+2 - Add to /etc/apt/sources.list the following values :
+
+deb http://httpredir.debian.org/debian jessie main contrib
+deb-src http://httpredir.debian.org/debian jessie main contrib
+
+deb http://httpredir.debian.org/debian jessie-updates main contrib
+deb-src http://httpredir.debian.org/debian jessie-updates main contrib
+
+deb http://security.debian.org/ jessie/updates main contrib 
+deb-src http://security.debian.org/ jessie/updates main contrib
+
+3 - apt-get update && apt-get upgrade && apt-get dist-upgrade
+
+4 - apt-get install sudo tmux python3 python-pip
