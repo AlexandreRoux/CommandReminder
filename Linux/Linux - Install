@@ -10,7 +10,7 @@ deb-src http://httpredir.debian.org/debian jessie-updates main contrib
 deb http://security.debian.org/ jessie/updates main contrib 
 deb-src http://security.debian.org/ jessie/updates main contrib
 
-2 - add-user $USER sudo
+2 - adduser $USER sudo
 3 - apt-get update && apt-get upgrade && apt-get dist-upgrade
 
 4 - apt-get install sudo tmux python3 python-pip
