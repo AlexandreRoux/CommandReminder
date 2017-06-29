@@ -33,3 +33,5 @@ netstat - n -o
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 robocopy "\\CIFS\Source" "S:\Shared Folders\Destination" /s /e
+
+CertUtil -hashfile C:\Users\alexandrer\Downloads\kali-linux-2017.1-amd64.iso SHA256
