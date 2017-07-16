@@ -1,0 +1,8 @@
+# Delete all containers
+docker rm $(docker ps -a -q)
+
+# Delete all images
+docker rmi $(docker images -q)
+
+# Open on shell into container ID
+docker exec -i -t b83 /bin/bash
