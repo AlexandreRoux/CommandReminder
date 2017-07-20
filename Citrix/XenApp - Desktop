@@ -1,6 +1,13 @@
-Install Delivery Controller + StoreFront
-Install VDA
-Configure Citrix Studio site (DB+Connexion)
-From Citrix Studio site > Machine Catalogs > Create Machine Catalog
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                          XenApp - Desktop
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Installation best practices
+
+  a. Install Delivery Controller + StoreFront
+  b. Install VDA
+  c. Configure Citrix Studio site (DB+Connexion)
+  e. From Citrix Studio site > Machine Catalogs > Create Machine Catalog
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 IE Enhanced Security Configuration : Off
