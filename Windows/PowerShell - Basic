@@ -15,3 +15,6 @@
    
 4. Delete multiple based on extension
     Shell > del *.txt
+    
+5. Research string in a file or path
+    Shell > Get-Content $file | ?{ $_ -like '*1.2.3.4*' }"
