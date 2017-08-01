@@ -1,1 +1,3 @@
 sudo find / -type d -name 'wp-content'
+
+scp ssh ec2-user@IP:/home/ec2-user/test.zip /home/users/directory
