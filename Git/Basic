@@ -1,0 +1,9 @@
+git clone https://github.com/AlexandreRoux/docker-amazonlinux-lamp
+docker build -t impa42/docker-amazonlinux-lamp .
+docker run -ti --name lamp -p 80:80 -p 443:443 -p 3306:3306 -v ~/www/:/var/www/html -d impa42/docker-amazonlinux-lamp
+
+mkdir repo && cd repo
+git remote add origin /path/to/origin.git
+git add .
+git commit -m "initial commit"
+git push origin master
